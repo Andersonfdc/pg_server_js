@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>{{item.title}}</title>
+
+{% endblock %}
+ 
+{% block content %} 
+
+    <div id="wrapper">
+        <h2>{{item.title}}</h2>
+    </div>
+
+    <section class="page">
+
+            <div class="card" id="{{item.id}}">
+                <div class="card_page-container">
+
+                    <iframe src="https://andersonfdc.github.io/{{item.id}}" frameborder="0"></iframe>
+                   
+                </div>
+        
+                <div class="card_content">
+                    <p>{{item.title}}</p> 
+                </div>
+        
+                <div class="card_info">
+                    <ul>
+                        <li>{{item.stack1}}</li>
+                        <li>{{item.stack2}}</li>
+                    </ul>
+        
+                    <p><a href="https://andersonfdc.github.io/{{item.link}}" target="_blank">Visite o site</a></p>
+                </div>
+            </div> 
+
+    </section>
+
+{% endblock %} 

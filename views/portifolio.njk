@@ -1,0 +1,120 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Portifólio - Anderson Costa</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+{% endblock %}
+ 
+{% block content %} 
+
+    <div id="wrapper">
+        <h2>PROJETOS</h2>
+    </div>
+
+    <section class="cards">
+
+        {% for item in itens %}
+
+            <div class="card" id="{{item.id}}">
+                <div class="card_image-container {{'featured-wrapper' if item.featured }}">
+                    <img src="{{item.img}}" alt="{{item.title}}"> 
+                    {% if item.featured %} 
+
+                    <div class="featured"> Featured </div>
+
+                    {% endif %}
+                </div>
+        
+                <div class="card_content">
+                    <p>{{item.title}}</p> 
+                </div>
+        
+                <div class="card_info">
+                    <ul>
+                        <li>{{item.stack1}}</li>
+                        <li>{{item.stack2}}</li>
+                    </ul>
+        
+                    <p><a href="https://andersonfdc.github.io/{{item.link}}" target="_blank">Visite o site</a></p>
+                </div>
+            </div> 
+
+        {% endfor %}
+
+    </section>
+
+    <div class="modal-overlay ">
+
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./scripts.js"></script>
+
+    </body>
+
+    <footer>
+        <div class="icons">
+            <a href="https://github.com/Andersonfdc" target="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+            </a>
+            <a href="https://www.linkedin.com/in/anderson-franciscodc/" target="_blank"> 
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+            </a>
+        
+        </div>
+    </footer>
+
+{% endblock %} 
+
+<!--
+       <div class="card" id="javascript/BuscaCEP/">
+            <div class="card_image-container">
+                <img src="https://page2images.b-cdn.net/ccimages/c8/c3/SKQYehC20FKqLNga.png" alt="BuscaCEP">  
+            </div>
+    
+            <div class="card_content">
+                <p>Busca CEP</p> 
+            </div>
+    
+            <div class="card_info">
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>Javascript</li>
+                </ul>
+    
+                <p><a href="https://andersonfdc.github.io/javascript/BuscaCEP/" target="_blank">Visite o site</a></p>
+            </div>
+        </div> 
+        
+        <div class="card" id="nlworigin/">
+            <div class="card_image-container">
+                <img src="https://page2images.b-cdn.net/ccimages/44/00/4DWVpnw81fMB7yhp.png" alt="sparta_barbearia">  
+              </div>
+      
+              <div class="card_content">
+                 <p>Sparta Barbearia</p> 
+              </div>
+      
+              <div class="card_info">
+                  <ul>
+                      <li>React</li>
+                      <li>Javascript</li>
+                  </ul>
+      
+                  <p><a href="https://andersonfdc.github.io/nlworigin/" target="_blank">Visite o site</a></p>
+              </div>
+           </div>
+-->          
